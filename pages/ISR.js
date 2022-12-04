@@ -56,7 +56,7 @@ function ISR({ data }) {
 
   return {
     props: { dateTime: res.data.datetime },
-    revalidate: 20,
+    revalidate: 10,
   };
 };`}
         </pre>
@@ -75,7 +75,7 @@ export const getStaticProps = async () => {
     props: {
       data: data,
     },
-    revalidate: 5,
+    revalidate: 10,
   };
 };
 
