@@ -34,9 +34,9 @@ const {params} = router?.query;
               3. Home Route <code>Home page of App</code>
               <pre>{`URL    : http://localhost:3000/
 
-File   :    ├── pages
-            |  ├── index.js
-            |  |
+File   : ├── pages
+         |  ├── index.js
+         |  |
 
 Code   : const jsx = <div>Home Page</div>;
                 `}</pre>
@@ -46,9 +46,9 @@ Code   : const jsx = <div>Home Page</div>;
               4. Simple Route <code>Product Listing page</code>
               <pre>{`URL    : http://localhost:3000/products/
 
-File   :    ├── pages
-            |  ├── products
-            |  |  ├── index.js
+File   : ├── pages
+         |  ├── products
+         |  |  ├── index.js
             
 Code   : const jsx = products.map((product)=> <div>{product?.name}</div>);
                 `}</pre>
@@ -57,10 +57,10 @@ Code   : const jsx = products.map((product)=> <div>{product?.name}</div>);
               5. Dynamic Routes <code>Product details page</code>
               <pre>{`URL    : http://localhost:3000/products/1
               
-File   : File   :   ├── pages
-                    |  ├── products
-                    |  |  ├── index.js
-                    |  |  ├── [productId].js
+File   : ├── pages
+         |  ├── products
+         |  |  ├── index.js
+         |  |  ├── [productId].js
 
 Code   : const {productId} = useRouter().query;
                 `}</pre>
@@ -69,11 +69,11 @@ Code   : const {productId} = useRouter().query;
               6. Nested Routes <code>First blog, Second blog</code>
               <pre>{`URL    : http://localhost:3000/blogs || http://localhost:3000/blogs/first
 
-File   : File   :   ├── pages
-                    |  ├── blogs
-                    |  |  ├── index.js
-                    |  |  ├── first.js
-                    |  |  ├── second.js
+File   : ├── pages
+         |  ├── blogs
+         |  |  ├── index.js
+         |  |  ├── first.js
+         |  |  ├── second.js
 
 Code   : const jsx = <div>First blog</div>;
                 `}</pre>
@@ -82,14 +82,14 @@ Code   : const jsx = <div>First blog</div>;
               7. Nested Dynamic Routes <code>products/1/reviews/1</code>
               <pre>{`URL    : http://localhost:3000/products/1/reviews/2
 
-File   : File   :   ├── pages
-                    |  ├── products
-                    |  |  ├── index.js
-                    |  |  ├── [productId]
-                    |  |  |  ├── index.js
-                    |  |  |  ├── reviews
-                    |  |  |  |  ├── [reviewId].js
-                    |  |  |  |  |
+File   : ├── pages
+         |  ├── products
+         |  |  ├── index.js
+         |  |  ├── [productId]
+         |  |  |  ├── index.js
+         |  |  |  ├── reviews
+         |  |  |  |  ├── [reviewId].js
+         |  |  |  |  |
 
 Code   : const {productId, reviewId} = useRouter().query;
                 `}</pre>
@@ -98,10 +98,10 @@ Code   : const {productId, reviewId} = useRouter().query;
               8. Catch All Routes <code>/docs/feature1/concept1</code>
               <pre>{`URL    : /docs || /docs/feature1 || /docs/feature1/concept1
 
-File   : File   :   ├── pages
-                    |  ├── docs
-                    |  |  ├── [[...params]].js
-                    |  |  |
+File   : ├── pages
+         |  ├── docs
+         |  |  ├── [[...params]].js
+         |  |  |
 
 Code   : const {params} = useRouter().query; // params will be array [feature1, concept1]
                 `}</pre>
