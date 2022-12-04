@@ -1,7 +1,13 @@
+:root {
+  --primaryColor: #ff7200;
+  --secondaryColor: #ffffff;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -13,4 +19,290 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* HTML tag styling */
+html {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/AppBackGround3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* POC styles */
+.poc-time {
+  color: var(--primaryColor);
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.info-container {
+  border: 5px solid var(--primaryColor);
+  color: var(--primaryColor);
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  font-size: 20px;
+  background-color: rgba(66, 50, 168, 0.5);
+}
+
+.info-header {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--primaryColor);
+  margin-bottom: 1rem;
+}
+
+.method {
+  font-size: 28px;
+  margin-bottom: 1rem;
+}
+
+.info-container code {
+  color: white;
+}
+
+.info-container pre {
+  width: max-content;
+  margin: auto;
+  border: 2px solid var(--primaryColor);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--secondaryColor);
+}
+
+.info-container li {
+  margin-bottom: 1.5rem;
+}
+
+/* Main App */
+.app {
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  height: 75px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  color: var(--primaryColor);
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 20px;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu > ul > li > a {
+  border: 2px solid var(--secondaryColor);
+  color: var(--secondaryColor);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: 0.1s ease-in-out;
+}
+
+.menu > ul > li > a:hover {
+  border: 2px solid var(--primaryColor);
+  color: var(--primaryColor);
+}
+
+.active-link {
+  border: 2px solid var(--primaryColor) !important;
+  color: var(--primaryColor) !important;
+}
+
+/* Page Section container */
+
+.section-container {
+  height: calc(100vh - 75px - 30px);
+  overflow: auto;
+}
+
+.section-container::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.section-container::-webkit-scrollbar-thumb {
+  background-color: var(--primaryColor);
+  border-radius: 5px;
+}
+
+/* Page Section */
+.section {
+  height: calc(140vh);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.company-name {
+  color: var(--primaryColor);
+  margin-left: 5px;
+  margin-right: 5px;
 }
