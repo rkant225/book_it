@@ -4,7 +4,11 @@ import Footer from "../Footer";
 import HeaderNextJsPOC from "./HeaderNextJsPOC";
 
 const LayoutNextJsPOC = (props) => {
-  const { children, title = "Book best hotels for your holidays" } = props;
+  const {
+    children,
+    title = "Book best hotels for your holidays",
+    logoText,
+  } = props;
   return (
     <div className="app">
       {/* Head tag */}
@@ -15,7 +19,7 @@ const LayoutNextJsPOC = (props) => {
       </Head>
 
       {/* NavBar */}
-      <HeaderNextJsPOC />
+      <HeaderNextJsPOC logoText={logoText} />
 
       {/* Main Content */}
       <div className="section-container">{children}</div>

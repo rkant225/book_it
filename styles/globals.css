@@ -173,6 +173,7 @@ html {
   width: 80%;
   margin: auto;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 0.5rem;
   font-size: 20px;
   background-color: rgba(66, 50, 168, 0.5);
@@ -201,6 +202,8 @@ html {
   border-radius: 10px;
   padding: 1rem;
   color: var(--secondaryColor);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .info-container li {
@@ -218,7 +221,6 @@ html {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
   left: 0;
@@ -298,7 +300,6 @@ html {
   position: sticky;
   bottom: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.4);
 }
 
 .company-name {

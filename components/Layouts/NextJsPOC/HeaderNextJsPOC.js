@@ -1,10 +1,8 @@
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import NavLink from "../../Utils/NavLink";
 
-const HeaderNextJsPOC = () => {
+const HeaderNextJsPOC = ({ logoText }) => {
   const [time, setTime] = useState("Wait...");
-  const router = useRouter();
 
   useEffect(() => {
     updateTime();
@@ -16,40 +14,29 @@ const HeaderNextJsPOC = () => {
     }, 1000);
   };
 
-  const getClassName = (path) => {
-    const pathName = router?.pathname;
-    return pathName === path ? "active-link" : "";
-  };
   return (
     <div className="navbar" suppressHydrationWarning>
-      <div className="logo">{time}</div>
+      <div className="logo">{logoText || time}</div>
 
       <div className="menu">
         <ul>
           <li>
-            <Link href="/" className={getClassName("/")}>
-              Home
-            </Link>
+            <NavLink href={"/"}>Home</NavLink>
           </li>
           <li>
-            <Link href="/CSR" className={getClassName("/CSR")}>
-              CSR
-            </Link>
+            <NavLink href="/routing">Routing</NavLink>
           </li>
           <li>
-            <Link href="/SSR" className={getClassName("/SSR")}>
-              SSR
-            </Link>
+            <NavLink href="/CSR">CSR</NavLink>
           </li>
           <li>
-            <Link href="/SSG" className={getClassName("/SSG")}>
-              SSG
-            </Link>
+            <NavLink href="/SSR">SSR</NavLink>
           </li>
           <li>
-            <Link href="/ISR" className={getClassName("/ISR")}>
-              ISR
-            </Link>
+            <NavLink href="/SSG">SSG</NavLink>
+          </li>
+          <li>
+            <NavLink href="/ISR">ISR</NavLink>
           </li>
         </ul>
       </div>

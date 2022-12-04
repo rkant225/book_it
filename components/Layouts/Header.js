@@ -1,15 +1,8 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
+import NavLink from "../Utils/NavLink";
 
 const Header = () => {
-  const router = useRouter();
-
-  const getClassName = (path) => {
-    const pathName = router?.pathname;
-    return pathName === path ? "active-link" : "";
-  };
-
   return (
     <div className="navbar" suppressHydrationWarning>
       <div className="logo">
@@ -19,34 +12,22 @@ const Header = () => {
       <div className="menu">
         <ul>
           <li>
-            <Link href="/" className={getClassName("/")}>
-              Home
-            </Link>
+            <NavLink href="/">Home</NavLink>
           </li>
           <li>
-            <Link href="/" className={getClassName("#")}>
-              Designe
-            </Link>
+            <NavLink href="/">Designe</NavLink>
           </li>
           <li>
-            <Link href="/" className={getClassName("#")}>
-              Rooms
-            </Link>
+            <NavLink href="/">Rooms</NavLink>
           </li>
           <li>
-            <Link href="/" className={getClassName("#")}>
-              Profile
-            </Link>
+            <NavLink href="/">Profile</NavLink>
           </li>
           <li>
-            <Link href="/" className={getClassName("#")}>
-              Contact
-            </Link>
+            <NavLink href="/">Contact</NavLink>
           </li>
           <li>
-            <Link href="/CSR" className={getClassName("/CSR")}>
-              Next JS POC
-            </Link>
+            <NavLink href="/CSR">Next JS POC</NavLink>
           </li>
         </ul>
       </div>
