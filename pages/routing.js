@@ -106,6 +106,42 @@ File   : ├── pages
 Code   : const {params} = useRouter().query; // params will be array [feature1, concept1]
                 `}</pre>
             </li>
+            <li>
+              9. Navigating from one route to different via
+              <code>{"<Link/>"}</code> component.
+              <pre>{`Import : import Link from "next/link";
+
+Code 1 : <Link href="/products">Products</Link>
+
+Code 2 : <Link href={\`/products/\${productId}\`}>Product One</Link>
+                `}</pre>
+            </li>
+            <li>
+              9. Navigating from one route to different{" "}
+              <code>Programaticly</code>.
+              <pre>{`Import : import { useRouter } from "next/router";
+
+Code   : const handleClick = () =>{
+             const router = useRouter();
+             router.push("/products");
+         }
+
+         <button onClick={handleClick}>Products</button>
+                `}</pre>
+            </li>
+            <li>
+              9. When user navigates to any of the undefined route then Next
+              displays a pre defined 404 page. We can re-define the UI for this
+              404 page by creating a new file with name of <code>404.js</code>.
+              <pre>{`URL    : /docs || /docs/feature1 || /docs/feature1/concept1
+
+File   : ├── pages
+         |  ├── 404.js
+         |  |  
+
+Code   : const jsx = <div>Page not found.</div>
+                `}</pre>
+            </li>
           </ol>
         </div>
       </div>
