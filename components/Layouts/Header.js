@@ -1,41 +1,55 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import NavLink from "../Utils/NavLink";
 
 const Header = () => {
+  const handleHamBurgerMenuClick = () => {
+    const menuContainer = document.getElementById("menu");
+    menuContainer.classList.toggle("show-mobile-menu");
+  };
+
   return (
     <div className="navbar" suppressHydrationWarning>
       <div className="logo">
         <Link href="/">book IT</Link>
       </div>
 
-      <div className="menu">
+      <div className="menu" id="menu">
         <ul>
           <li>
-            <NavLink href="/">Home</NavLink>
+            <NavLink href="/" onClick={handleHamBurgerMenuClick}>Home</NavLink>
           </li>
           <li>
-            <NavLink href="/users">Users</NavLink>
+            <NavLink href="/users" onClick={handleHamBurgerMenuClick}>Users</NavLink>
           </li>
           <li>
-            <NavLink href="/users-swr">Users SWR</NavLink>
+            <NavLink href="/users-swr" onClick={handleHamBurgerMenuClick}>Users SWR</NavLink>
           </li>
           <li>
-            <NavLink href="/">Designe</NavLink>
+            <NavLink href="/" onClick={handleHamBurgerMenuClick}>Designe</NavLink>
           </li>
           <li>
-            <NavLink href="/">Rooms</NavLink>
+            <NavLink href="/" onClick={handleHamBurgerMenuClick}>Rooms</NavLink>
           </li>
           <li>
-            <NavLink href="/">Profile</NavLink>
+            <NavLink href="/" onClick={handleHamBurgerMenuClick}>Profile</NavLink>
           </li>
           <li>
-            <NavLink href="/">Contact</NavLink>
+            <NavLink href="/" onClick={handleHamBurgerMenuClick}>Contact</NavLink>
           </li>
           <li>
-            <NavLink href="/CSR">Next JS POC</NavLink>
+            <NavLink href="/CSR" onClick={handleHamBurgerMenuClick}>Next JS POC</NavLink>
           </li>
         </ul>
+      </div>
+      <div className="hamburger-menu-container">
+        <FontAwesomeIcon
+          icon={faBars}
+          className="hamburger-menu-icon"
+          onClick={handleHamBurgerMenuClick}
+        />
       </div>
     </div>
   );

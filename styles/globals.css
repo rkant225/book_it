@@ -368,7 +368,7 @@ html {
     position: fixed;
     top: 0px;
     right: -400px;
-    background-color: gray;
+    background-color: rgba(60, 60, 60);
     height: 100vh;
     width: 50%;
     transition: all .5s;
