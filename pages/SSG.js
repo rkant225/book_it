@@ -12,7 +12,18 @@ const SSG = ({ data }) => {
 
       <div className="info-container">
         <div className="info-header">
-          Static Site Generation <code>SSG</code>
+          <div className="header">
+            Static Site Generation <code>SSG</code>
+          </div>
+          <div className="credits">
+            <a
+              href="https://theodorusclarence.com/blog/nextjs-fetch-method"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <code>Credits : @theodorusclarence</code>
+            </a>
+          </div>
         </div>
         <div className="method">
           Method : <code>getStaticProps</code>

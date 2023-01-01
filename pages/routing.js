@@ -4,7 +4,19 @@ const Routing = () => {
   return (
     <div>
       <div className="info-container">
-        <div className="info-header">Routing - Next JS</div>
+        <div className="info-header">
+          <div className="header">Routing - Next JS</div>
+          <div className="credits">
+            <a
+              href="https://www.youtube.com/watch?v=9P8mASSREYM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <code>Credits : @Codevolution</code>
+            </a>
+          </div>
+        </div>
+
         <div className="method">
           <code>File-system-based routing</code>
         </div>
@@ -117,7 +129,7 @@ Code 2 : <Link href={\`/products/\${productId}\`}>Product One</Link>
                 `}</pre>
             </li>
             <li>
-              9. Navigating from one route to different{" "}
+              10. Navigating from one route to different{" "}
               <code>Programaticly</code>.
               <pre>{`Import : import { useRouter } from "next/router";
 
@@ -130,7 +142,7 @@ Code   : const handleClick = () =>{
                 `}</pre>
             </li>
             <li>
-              9. When user navigates to any of the undefined route then Next
+              11. When user navigates to any of the undefined route then Next
               displays a pre defined 404 page. We can re-define the UI for this
               404 page by creating a new file with name of <code>404.js</code>.
               <pre>{`URL    : /docs || /docs/feature1 || /docs/feature1/concept1

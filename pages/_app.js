@@ -1,5 +1,7 @@
 import LayoutMain from "../components/Layouts/LayoutMain";
+import PageNavigationLoader from "../components/Utils/PageNavigationLoader";
 import "../styles/globals.css";
+import "../styles/nprogress.css";
 
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
@@ -11,7 +13,12 @@ function MyApp({ Component, pageProps }) {
     </LayoutMain>
   );
 
-  return <>{page}</>;
+  return (
+    <>
+      <PageNavigationLoader />
+      {page}
+    </>
+  );
 }
 
 export default MyApp;

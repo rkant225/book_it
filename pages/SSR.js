@@ -12,7 +12,18 @@ const SSR = ({ data }) => {
 
       <div className="info-container">
         <div className="info-header">
-          Server Side Rendering <code>SSR</code>
+          <div className="header">
+            Server Side Rendering <code>SSR</code>
+          </div>
+          <div className="credits">
+            <a
+              href="https://theodorusclarence.com/blog/nextjs-fetch-method"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <code>Credits : @theodorusclarence</code>
+            </a>
+          </div>
         </div>
         <div className="method">
           Method : <code>getServerSideProps</code>

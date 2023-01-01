@@ -12,7 +12,18 @@ function ISR({ data }) {
 
       <div className="info-container">
         <div className="info-header">
-          Incremental Static Regeneration <code>ISR</code>
+          <div className="header">
+            Incremental Static Regeneration <code>ISR</code>
+          </div>
+          <div className="credits">
+            <a
+              href="https://theodorusclarence.com/blog/nextjs-fetch-method"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <code>Credits : @theodorusclarence</code>
+            </a>
+          </div>
         </div>
         <div className="method">
           Method : <code>getStaticProps + revalidate</code>

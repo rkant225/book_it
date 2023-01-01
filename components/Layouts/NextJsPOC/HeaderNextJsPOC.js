@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import NavLink from "../../Utils/NavLink";
 
@@ -14,31 +16,55 @@ const HeaderNextJsPOC = ({ logoText }) => {
     }, 1000);
   };
 
+  const handleHamBurgerMenuClick = () => {
+    const menuContainer = document.getElementById("menu");
+    menuContainer.classList.toggle("show-mobile-menu");
+  };
+
   return (
-    <div className="navbar" suppressHydrationWarning>
+    <div className="navbar">
       <div className="logo">{logoText || time}</div>
 
-      <div className="menu">
+      <div id="menu" className="menu">
         <ul>
           <li>
-            <NavLink href={"/"}>Home</NavLink>
+            <NavLink href={"/"} onClick={handleHamBurgerMenuClick}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/routing">Routing</NavLink>
+            <NavLink href="/routing" onClick={handleHamBurgerMenuClick}>
+              Routing
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/CSR">CSR</NavLink>
+            <NavLink href="/CSR" onClick={handleHamBurgerMenuClick}>
+              CSR
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/SSR">SSR</NavLink>
+            <NavLink href="/SSR" onClick={handleHamBurgerMenuClick}>
+              SSR
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/SSG">SSG</NavLink>
+            <NavLink href="/SSG" onClick={handleHamBurgerMenuClick}>
+              SSG
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/ISR">ISR</NavLink>
+            <NavLink href="/ISR" onClick={handleHamBurgerMenuClick}>
+              ISR
+            </NavLink>
           </li>
         </ul>
+      </div>
+      <div className="hamburger-menu-container">
+        <FontAwesomeIcon
+          icon={faBars}
+          className="hamburger-menu-icon"
+          onClick={handleHamBurgerMenuClick}
+        />
       </div>
     </div>
   );

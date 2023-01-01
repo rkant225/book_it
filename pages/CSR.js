@@ -20,7 +20,18 @@ const CSR = () => {
 
       <div className="info-container">
         <div className="info-header">
-          Client Side Rendering <code>CSR</code>
+          <div className="header">
+            Client Side Rendering <code>CSR</code>
+          </div>
+          <div className="credits">
+            <a
+              href="https://theodorusclarence.com/blog/nextjs-fetch-method"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <code>Credits : @theodorusclarence</code>
+            </a>
+          </div>
         </div>
         <div className="method">
           Method : <code>useEffect</code>
